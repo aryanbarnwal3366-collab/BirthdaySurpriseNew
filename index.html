@@ -18,7 +18,6 @@
             font-family: Arial, sans-serif;
             color: white;
             text-align: center;
-
             background: linear-gradient(
                 135deg,
                 #ff9a9e,
@@ -26,14 +25,13 @@
                 #fbc2eb,
                 #a6c1ee
             );
-
             background-size: 300% 300%;
             animation: backgroundMove 10s ease infinite;
         }
 
         @keyframes backgroundMove {
-            0%   { background-position: 0% 50%; }
-            50%  { background-position: 100% 50%; }
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
 
@@ -64,7 +62,7 @@
 
         @keyframes glow {
             from { text-shadow: 0 0 8px #ff80ab; }
-            to   { text-shadow: 0 0 25px #ffffff; }
+            to { text-shadow: 0 0 25px #ffffff; }
         }
 
         .cake {
@@ -75,7 +73,7 @@
 
         @keyframes bounce {
             0%, 100% { transform: translateY(0); }
-            50%      { transform: translateY(-12px); }
+            50% { transform: translateY(-12px); }
         }
 
         .subtitle {
@@ -87,7 +85,7 @@
             border: none;
             border-radius: 30px;
             padding: 15px 25px;
-            margin-top: 20px;
+            margin: 10px 5px;
             background: white;
             color: #e75480;
             font-size: 16px;
@@ -147,6 +145,25 @@
             color: white;
         }
 
+        .song-box {
+            margin: 28px auto;
+            padding: 18px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.22);
+        }
+
+        .song-box h2 {
+            font-size: 22px;
+        }
+
+        .song-box iframe {
+            width: 100%;
+            max-width: 400px;
+            height: 225px;
+            border: none;
+            border-radius: 12px;
+        }
+
         @media (max-width: 480px) {
             .container {
                 padding-top: 40px;
@@ -158,6 +175,10 @@
 
             .subtitle {
                 font-size: 16px;
+            }
+
+            .song-box iframe {
+                height: 200px;
             }
         }
     </style>
@@ -185,9 +206,7 @@
         <section id="surprise">
             <h2>🎉 Make a Wish! 🎉</h2>
 
-            <p>
-                Happy Birthday, Ghanishka! 💗
-            </p>
+            <p>Happy Birthday, Ghanishka! 💗</p>
 
             <p>
                 May your day be filled with happiness,
@@ -202,6 +221,22 @@
             <div style="font-size: 35px;">
                 🎈 🎂 🎈
             </div>
+        </section>
+
+        <!-- Birthday Song -->
+        <section class="song-box">
+            <h2>🎵 A Special Song for Ghanishka ❤️</h2>
+
+            <p>
+                Play this song and enjoy your special day! 💗
+            </p>
+
+            <iframe
+                src="https://www.youtube.com/embed/KNgJ59M3yFA"
+                title="A Special Song for Ghanishka"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
         </section>
 
         <div class="footer">
