@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Special Birthday Surprise</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Georgia, serif;
+    color: white;
+    text-align: center;
+    background: linear-gradient(145deg, #10172f, #49305e, #a45d83);
+}
+
+.page {
+    min-height: 100vh;
+    padding: 30px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#pageWish {
+    display: none;
+    background: linear-gradient(145deg, #ffe5ed, #f3cce3, #e4d8fa);
+    color: #713c59;
+}
+
+h1 {
+    font-size: clamp(30px, 7vw, 44px);
+}
+
+.subtitle {
+    color: #f8dff0;
+    font-family: Arial, sans-serif;
+}
+
+.photo-frame {
+    padding: 8px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #ffe4a8, #e5a9e9);
+    box-shadow: 0 0 30px #f8d6b8;
+}
+
+.photo-frame img {
+    width: min(78vw, 330px);
+    height: 390px;
+    object-fit: cover;
+    object-position: center 30%;
+    border-radius: 19px;
+    display: block;
+}
+
+.player {
+    width: min(100%, 360px);
+    margin-top: 22px;
+    padding: 14px;
+    background: rgba(255,255,255,.12);
+    border-radius: 18px;
+}
+
+iframe {
+    width: 100%;
+    height: 200px;
+    border: 0;
+    border-radius: 12px;
+}
+
+button {
+    margin-top: 24px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 30px;
+    background: #ffe4a8;
+    color: #43294e;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.wish-card {
+    max-width: 600px;
+    padding: 35px 25px;
+    border-radius: 25px;
+    background: rgba(255,255,255,.65);
+    box-shadow: 0 15px 40px rgba(120,60,100,.15);
+}
+
+.wish-card p {
+    font: 17px/1.9 Arial, sans-serif;
+}
+
+.signature {
+    color: #a34f79;
+    font-style: italic;
+    font-size: 20px;
+    margin-top: 25px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- SECOND PAGE: SONG -->
+
+<section class="page" id="pageSong">
+
+    <h1>A Song for You ♡</h1>
+
+    <p class="subtitle">
+        A little melody for your special day
+    </p>
+
+    <div class="photo-frame">
+        <img src="{{ url_for('static', filename='ghanishka.jpg') }}"
+             alt="Birthday Photo">
+    </div>
+
+    <div class="player">
+        <p>Your Special Song 🎵</p>
+
+        <iframe
+            src="https://www.youtube.com/embed/KNgJ59M3yFA?autoplay=1rel=0"
+            title="Birthday Song"
+            allow="autoplay; encrypted-media; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <button onclick="showWish()">
+        Next Surprise →
+    </button>
+
+</section>
+
+
+<!-- THIRD PAGE: WISH -->
+
+<section class="page" id="pageWish">
+
+    <div class="wish-card">
+
+        <h1>Happy Birthday, Ghanishka! 🎂</h1>
+
+        <div style="font-size:35px;">🌷 ✨ 💗 ✨ 🌷</div>
+
+        <p>
+            May your day be filled with little moments
+            that make you smile, people who make you
+            feel valued, and memories you will always cherish.
+        </p>
+
+        <p>
+            Keep smiling, keep shining in your own way.
+            May this new year of your life bring you
+            happiness, peace and success.
+        </p>
+
+        <p>
+            You deserve all the beautiful things
+            life has to offer. Have a wonderful birthday!
+        </p>
+
+        <div class="signature">
+            Wishing you a beautiful year ahead ♡
+        </div>
+
+        <div style="font-size:30px; margin-top:20px;">
+            💗 🌸 💗
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+function showWish() {
+
+    document.getElementById("pageSong").style.display = "none";
+
+    document.getElementById("pageWish").style.display = "flex";
+
+    window.scrollTo(0, 0);
+}
+</script>
+
+</body>
+</html>

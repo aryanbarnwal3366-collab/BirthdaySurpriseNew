@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Special Wish</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; padding: 24px; display: grid; place-items: center;
+      text-align: center; color: #66384f; font-family: Georgia, 'Times New Roman', serif;
+      background: radial-gradient(circle at top left, #fff7e8, transparent 42%),
+                  linear-gradient(145deg, #ffe8ef, #f7d8e8 55%, #e8dafa);
+    }
+    .letter {
+      width: min(100%, 620px); padding: 38px 26px; border-radius: 28px;
+      background: rgba(255,255,255,.72); border: 1px solid #fff;
+      box-shadow: 0 18px 55px rgba(125, 65, 105, .18);
+      animation: appear 1s ease both;
+    }
+    .flower { font-size: 2rem; }
+    h1 { font-size: clamp(2.1rem, 7vw, 3.3rem); margin: 12px 0; color: #a34f79; }
+    p { font: 1.05rem/1.9 Arial, sans-serif; }
+    .signature { margin-top: 24px; color: #a34f79; font-style: italic; font-size: 1.2rem; }
+    a { display: inline-block; margin-top: 18px; color: #8c4770; font: bold .95rem Arial, sans-serif; }
+    @keyframes appear { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+</head>
+<body>
+  <main class="letter">
+    <div class="flower">🌷 ✨ 🌷</div>
+    <h1>Happy Birthday, Ghanishka!</h1>
+    <p>
+      May your day be filled with little moments that make you smile,
+      people who make you feel valued, and memories you will always cherish.
+      Keep shining in your own way, keep smiling, and may the year ahead
+      bring you lots of happiness, peace, and success.
+    </p>
+    <p>Today is your day, so enjoy every moment of it!</p>
+    <div class="signature">Wishing you a beautiful year ahead ♡</div>
+    <a href="/">← Back to Home</a>
+  </main>
+</body>
+</html>
